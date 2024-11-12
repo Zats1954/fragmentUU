@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Fragments</string>
+    <string name="title_text">Мои заметки</string>
+    <string name="exit">Выход</string>
+    <string name="name">Имя</string>
+    <string name="text_age">Возраст</string>
+    <string name="last_name">Фамилия</string>
+    <string name="position">Должность</string>
+    <string name="info">Получить данные</string>
+    <string name="delete">Удалить данные</string>
+    <string name="add">Добавить</string>
+</resources>
