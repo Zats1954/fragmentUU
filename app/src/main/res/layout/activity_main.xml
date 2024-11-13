@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -24,30 +23,10 @@
             android:textSize="@dimen/text_size" />
     </androidx.appcompat.widget.Toolbar>
 
-    <EditText
-        android:id="@+id/edit_text_id"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_gravity="center"
-        android:layout_margin="@dimen/margin"
-        android:text="Hello World!"
-        />
-
-    <Button
-        android:id="@+id/btnAdd"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:layout_margin="@dimen/margin"
-        android:text="@string/add"
- />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvList"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_gravity="center"
-        android:layout_margin="@dimen/margin"
-        android:layout_weight="1"/>
+  <androidx.fragment.app.FragmentContainerView
+      android:id="@+id/fragment"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:name="ru.zatsoft.fragments.MyFragment"/>
 
 </LinearLayout>
