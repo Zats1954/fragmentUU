@@ -8,7 +8,7 @@ import androidx.appcompat.widget.Toolbar
 import ru.zatsoft.fragments.databinding.ActivityMainBinding
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), OnFragmentDataListener {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var toolBar: Toolbar
@@ -18,6 +18,9 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val myFragment = MyFragment()
+        supportFragmentManager.beginTransaction().replace(R.id.main,myFragment).commit()
 
         toolBar = binding.toolbarMain
         setSupportActionBar(toolBar)
@@ -33,5 +36,10 @@ class MainActivity : AppCompatActivity() {
         if (item.itemId == R.id.exit)
             finish()
         return super.onOptionsItemSelected(item)
+    }
+
+    override fun onData(note: Note) {
+        val bundle = Bundle()
+        bundle.putParcelable("note", note)
     }
 }

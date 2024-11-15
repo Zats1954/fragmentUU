@@ -1,6 +1,8 @@
 package ru.zatsoft.fragments
 
-import android.widget.CheckBox
-import java.util.Date
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+import java.time.LocalDateTime
 
-data class Note(val id: Int, val string: String, val isChecked: Boolean, val date: Date)
+@Parcelize
+data class Note(val id: Int, var string: String, val isChecked: Boolean, val date: LocalDateTime): Parcelable

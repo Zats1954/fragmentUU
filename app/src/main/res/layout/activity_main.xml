@@ -23,10 +23,6 @@
             android:textSize="@dimen/text_size" />
     </androidx.appcompat.widget.Toolbar>
 
-  <androidx.fragment.app.FragmentContainerView
-      android:id="@+id/fragment"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:name="ru.zatsoft.fragments.MyFragment"/>
+
 
 </LinearLayout>
